@@ -41,6 +41,22 @@ img {
   margin: 0 auto;
 }
 
+.btn {
+  max-width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  font: inherit;
+  transition: background-color 0.3s ease-in;
+}
+
+.btn :hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 /* Navbar */
 
 /* Desktop & Menu */
@@ -128,6 +144,56 @@ img {
 
 .navbar__mobile-menu-link--primary:hover {
   color: #fff;
+}
+
+/* Hero Section */
+
+.hero {
+  background-image: url("../images/header-background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 11.5rem 2rem 8rem;
+}
+
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero__content {
+  max-width: 500px;
+}
+
+.hero__image {
+  max-width: 500px;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero__title--primary {
+  color: var(--primary-color);
+}
+
+.hero__description {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 /* Media Queries */
