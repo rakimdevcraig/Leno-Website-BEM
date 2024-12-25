@@ -73,6 +73,11 @@ img {
   transition: background-color 0.3s ease-in-out;
 }
 
+.navbar--scroll {
+  background-color: black;
+  backdrop-filter: blur(10px);
+}
+
 .navbar__container {
   display: flex;
   justify-content: space-between;
