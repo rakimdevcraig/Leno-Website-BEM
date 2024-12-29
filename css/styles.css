@@ -201,7 +201,111 @@ img {
   margin-top: 2rem;
 }
 
+/* Testimonials */
+.testimonials {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials__card {
+  padding: 0 3rem;
+}
+
+.testimonials__card img {
+  height: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 2rem auto;
+}
+
+.testimonials__card-description {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features {
+  background-color: var(--tertiary-color);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.features__title {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.features__description {
+  margin: 1rem auto 4rem; /*Since we're giving a max width have to recenter with margin*/
+  max-width: 600px; /*So the text doesnt span out too far*/
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6rem;
+}
+
+.features__grid-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.features__grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: right;
+}
+
+.features__grid-column-right .features__grid-item {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.features__grid-item-icon {
+  color: var(--primary-color);
+}
+
+.features__grid-item-text-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 /* Media Queries */
+
+@media (max-width: 992px) {
+  .testimonials {
+    padding: 1.5rem 0;
+  }
+  .testimonials__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .testimonials__card {
+    padding: 0 1.5rem;
+  }
+
+  .testimonials__card:nth-child(3) {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .navbar__menu {
@@ -210,5 +314,13 @@ img {
 
   .navbar__mobile-menu {
     display: block;
+  }
+
+  .testimonials__container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials__card:nth-child(2) {
+    display: none;
   }
 }
